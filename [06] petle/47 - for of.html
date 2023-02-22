@@ -17,8 +17,15 @@
 
       for (const number of numbers) {
         if (number % 2 === 0) {
-          console.log(`Liczba ${number} jest parzysta`);
-        } else console.log(`Liczba ${number} jest nieparzysta`);
+          console.log(
+            `%cLiczba ${number} jest parzysta.`,
+            "background-color: gold; color: black"
+          );
+        } else
+          console.log(
+            `%cLiczba ${number} jest nieparzysta.`,
+            "background-color: tomato; color: black"
+          );
       }
     </script>
   </body>

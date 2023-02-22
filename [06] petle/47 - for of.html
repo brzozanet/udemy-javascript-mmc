@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      numbers = [5, 8, 10, 23, 48, 60];
+      for (const number of numbers) {
+        console.log(number / 5);
+      }
+
+      console.log("--------------");
+
+      for (const item of numbers) {
+        if (item % 2 === 0) {
+          console.log(`Liczba ${item} jest parzysta`);
+        } else console.log(`Liczba ${item} jest nieparzysta`);
+      }
+    </script>
+  </body>
+</html>

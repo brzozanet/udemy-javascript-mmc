@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+
+        function multiply(x) {
+            return x * 2;
+        }
+
+        const newNumbers = numbers.map(multiply);
+
+        console.log(numbers);
+        console.log(newNumbers);
+
+        console.log("----------------");
+
+        const abc = ["a", "b", "c"];
+        const def = ["d", "e", "f"];
+
+        const abcdef = abc.concat(def, ["g", "h", "i"]);
+        console.log(abcdef);
+
+        console.log("----------------");
+
+        console.log(abc);
+        console.log(...abc);
+
+        const drinks = ["pepsi", "kawa", "herbata"];
+        const meals = ["tatar", "śledź", "solanka"];
+
+        const menu = [...meals, ...drinks];
+        console.log(menu);
+
+        const menu2 = meals.concat(drinks);
+        console.log(menu2);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const letters = ["c", "d"];
+
+      letters.unshift("a", "b");
+      letters.push("e", "f");
+      console.log(letters);
+
+      function checkLetter(letter) {
+        const result = letters.indexOf(letter);
+        if (result !== -1) {
+          console.log(`Litera ${letter} znajduje się w zbiorze ${letters}`);
+        } else
+          console.log(`Litera ${letter} NIE znajduje się w zbiorze ${letters}`);
+      }
+
+      checkLetter("c");
+      checkLetter("z");
+      checkLetter("b");
+      checkLetter("p");
+    </script>
+  </body>
+</html>

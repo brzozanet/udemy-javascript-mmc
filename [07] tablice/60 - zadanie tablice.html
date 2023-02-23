@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const cars = "Audi, Mercedes, BMW, Nissan, Dodge";
+      const carsArr = cars.split(", ");
+      console.log(carsArr);
+
+      if (carsArr.length > 3) {
+        console.log("Tablica jest OK");
+      } else console.log("Dupa, zjebałem");
+
+      function searchCar(name) {
+        const newCar = carsArr.indexOf(name);
+
+        if (newCar === -1) {
+          console.log("Nie ma takiej marki w tablicy, dodaję...");
+          carsArr.push(name);
+          console.log(carsArr);
+        } else console.log("Jest taka marka w tablicy");
+      }
+
+      searchCar("Jeep");
+      searchCar("BMW");
+      searchCar("Dodge");
+      searchCar("Fiat");
+    </script>
+  </body>
+</html>

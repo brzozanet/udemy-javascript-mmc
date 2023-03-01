@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, odit.</p>
+    <ul>
+      <li id="first_item">Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet consectetur.</li>
+      <li class="item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+      <li class="item"><p>Lorem, ipsum dolor.</p></li>
+      <li class="item-paragraph">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+          cumque? Placeat, voluptatem!
+        </p>
+      </li>
+      <li class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </li>
+      <li>Lorem ipsum dolor sit.</li>
+    </ul>
+    <script>
+      const fetch1 = document.getElementById("first_item");
+      console.log(fetch1);
+
+      const fetch2 = document.getElementsByTagName("p");
+      console.log(fetch2);
+
+      const fetch3 = document.getElementsByClassName("item");
+      console.log(fetch3);
+
+      console.log("----------------");
+
+      const fetch4 = document.querySelector("li");
+      console.log(fetch4);
+
+      const fetch5 = document.querySelector("li p");
+      console.log(fetch5);
+
+      const fetch6 = fetch4.querySelector(".item");
+      console.log(fetch6);
+
+      const fetch7 = document.querySelector(".item-paragraph");
+      console.log(fetch7);
+
+      const fetch8 = fetch7.querySelector("p");
+      console.log(fetch8);
+
+      console.log("----------------");
+
+      const fetch9 = document.querySelectorAll("li");
+      console.log(fetch9);
+      console.log(fetch9.length);
+    </script>
+  </body>
+</html>

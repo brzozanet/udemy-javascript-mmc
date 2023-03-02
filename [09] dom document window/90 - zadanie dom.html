@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ulList = document.createElement("ul");
+      const number = 10;      
+
+      document.body.append(ulList);
+
+      for (let i = 1; i <= number; i++) {
+        const liItem = document.createElement("li");
+        liItem.textContent = i;
+        ulList.append(liItem);
+      }
+
+      const lastItem = ulList.querySelector("li:last-child");
+      lastItem.innerHTML = "Jestem ostatnim elementem."
+
+      lastItem.style.backgroundColor = "blue";
+      lastItem.style.padding = "20px 40px";
+      lastItem.style.fontSize = "48px";
+
+    </script>
+  </body>
+</html>

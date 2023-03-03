@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img>
+
+    <script>
+        const imgTag = document.querySelector("img");
+        console.log(imgTag);
+
+        imgTag.setAttribute("src", "https://fotowarsztaty.com/wp-content/uploads/logo-fotowarsztaty-1.png");
+        imgTag.setAttribute("alt", "logo Fotowarsztaty");
+
+        const text = () => {
+            console.log("Witaj na Fotowarsztatach!");
+        }
+
+        setTimeout(text, 2000);
+    </script>
+</body>
+</html>

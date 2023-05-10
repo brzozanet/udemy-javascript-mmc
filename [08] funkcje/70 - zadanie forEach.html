@@ -8,7 +8,24 @@
   </head>
   <body>
     <script>
+      const num = 10;
+      const numbers = [];
 
+      for (let i = 0; i < num; i++) {
+        numbers.push(i);
+      };
+
+      const checkNumber = (data) => {
+        if (data % 3 === 0 && data !== 0) {
+          console.log(`Liczba ${data} jest podzielna przez 3`);
+        } else {
+          console.log(`Liczba ${data} nie jest podzielna przez 3 lub jest równa 0.`);
+        };
+      };
+
+      numbers.forEach(num => checkNumber(num));
+
+      console.log(numbers);
     </script>
   </body>
 </html>

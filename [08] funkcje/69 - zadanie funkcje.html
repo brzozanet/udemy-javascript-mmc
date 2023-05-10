@@ -8,15 +8,17 @@
   </head>
   <body>
     <script>
+
       let celsius;
-      let result;
+      let temp;
 
       const fahrenheit = (celsius) => {
-        result = celsius * 1.8 + 32;
-        console.log(`Temperatura ${celsius} stopni C to ${result} stopni F.`);
+        temp = celsius * 1.8 + 32
+        console.log(`${temp} st. F = ${celsius} st. C`);
       };
 
-    fahrenheit(prompt());
+      fahrenheit(0);
+
     </script>
   </body>
 </html>

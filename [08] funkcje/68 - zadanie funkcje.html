@@ -14,18 +14,18 @@
         score = x + y;
         console.log(score);
         if (score % 2 === 0) {
-          odd();
-        } else {
           even();
+        } else {
+          odd();
         }
       };
 
       const odd = () => {
-        console.log(`Liczba ${score} jest parzysta`);
+        console.log(`Liczba ${score} jest nieparzysta`);
       };
 
       const even = () => {
-        console.log(`Liczba ${score} jest nieparzysta`);
+        console.log(`Liczba ${score} jest parzysta`);
       };
 
       add(2, 9);

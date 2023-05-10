@@ -12,19 +12,21 @@
 
       const add = (x, y) => {
         score = x + y;
-        // if (score % 2 === 0) {
-        //   even();
-        // } else odd();
-        score % 2 === 0 ? even() : odd();
+        console.log(score);
+        if (score % 2 === 0) {
+          odd();
+        } else {
+          even();
+        }
       };
 
-      function even() {
-        console.log(`Liczba ${score} jest parzysta.`);
-      }
+      const odd = () => {
+        console.log(`Liczba ${score} jest parzysta`);
+      };
 
-      function odd() {
-        console.log(`Liczba ${score} jest nieparzysta.`);
-      }
+      const even = () => {
+        console.log(`Liczba ${score} jest nieparzysta`);
+      };
 
       add(2, 9);
       add(0, 5);

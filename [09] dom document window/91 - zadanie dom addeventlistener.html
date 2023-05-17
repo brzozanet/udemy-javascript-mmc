@@ -83,38 +83,30 @@
       const btn1 = document.querySelector(".btn1");
       const btn2 = document.querySelector(".btn2");
       const square = document.querySelector(".square");
-      const p1 = document.querySelector("p1");
-      const p2 = document.querySelector("p2");
+      const p1 = document.querySelector(".p1");
+      const p2 = document.querySelector(".p2");
 
       const hello = () => {
-        console.log("Cześć!");
+        console.log("Hello");
       };
 
-      const colorRed = () => {
+      const changeColorRed = () => {
         square.style.backgroundColor = "red";
       };
 
-      const colorBlue = () => {
+      const changeColorBlue = () => {
         square.style.backgroundColor = "blue";
       };
 
-      const toggleClass = () => {
+      const toggle = () => {
         p1.classList.toggle("show");
         p2.classList.toggle("show");
-
-        // if (p1.classList.contains("show")) {
-        //     p1.classList.remove("show");
-        //     p2.classList.add("show");
-        // } else {
-        //     p1.classList.add("show");
-        //     p2.classList.remove("show");
-        // }
       };
 
       btn1.addEventListener("dblclick", hello);
-      square.addEventListener("mouseover", colorRed);
-      square.addEventListener("mouseout", colorBlue);
-      btn2.addEventListener("click", toggleClass);
+      square.addEventListener("mouseover", changeColorRed);
+      square.addEventListener("mouseout", changeColorBlue);
+      btn2.addEventListener("click", toggle);
     </script>
   </body>
 </html>

@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <img>
+  </head>
+  <body>
+    <img />
     <script>
-        const imgEl = document.querySelector('img');
-        imgEl.src = "https://fotowarsztaty.com/wp-content/uploads/fotowarsztaty-morawy_wide-uai-1032x774.jpg";
-        imgEl.alt = "Zdjęcie z fotowarsztatów";
+      const imgEl = document.querySelector("img");
+      imgEl.src =
+        "https://fotowarsztaty.com/wp-content/uploads/fotowarsztaty-morawy_wide-uai-1032x774.jpg";
+      imgEl.alt = "Zdjęcie z fotowarsztatów";
 
-        const writeSomething = () => {
-            const paragraphEl = document.createElement('p');
-            paragraphEl.textContent = "Lorem ipsum dolor sit amet cooomm";
-            document.body.append(paragraphEl);
-        };
+      const writeSomething = () => {
+        const paragraphEl = document.createElement("p");
+        paragraphEl.textContent = "Lorem ipsum dolor sit amet cooomm";
+        document.body.append(paragraphEl);
+      };
 
-        setTimeout(writeSomething, 5000);
+      setTimeout(writeSomething, 5000);
     </script>
-</body>
+  </body>
 </html>

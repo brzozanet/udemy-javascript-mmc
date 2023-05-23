@@ -27,14 +27,13 @@
       for (let i = 0; i < liEl.length; i++) {
         liEl[i].textContent = `Element nr ${i + 1}`;
         liEl[i].setAttribute("ID", i + 1);
-      };
+      }
 
       const thirdLiEl = ulEl.querySelector("li:nth-child(3)");
       console.log(thirdLiEl);
 
       const result = thirdLiEl.closest("div");
       console.log(result);
-
     </script>
   </body>
 </html>

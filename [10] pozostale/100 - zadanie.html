@@ -18,35 +18,23 @@
     </div>
 
     <script>
-      const liItems = document.querySelectorAll("li");
-      console.log(liItems);
-      console.log(liItems.length);
+      const wrapperEl = document.querySelector(".wrapper");
+      const ulEl = wrapperEl.querySelector("ul");
+      const liEl = ulEl.querySelectorAll("li");
 
-      for (let i = 1; i <= liItems.length; i++) {
-        liItems[i - 1].textContent = i;
-        liItems[i - 1].dataset.id = i;
-      }
+      console.log(liEl);
 
-      // let number = 1;
-      // let idNumber = 1;
+      for (let i = 0; i < liEl.length; i++) {
+        liEl[i].textContent = `Element nr ${i + 1}`;
+        liEl[i].setAttribute("ID", i + 1);
+      };
 
-      // for (const liItem of liItems) {
-      //   liItem.textContent = number++;
-      //   liItem.dataset.id = idNumber++;
-      // }
+      const thirdLiEl = ulEl.querySelector("li:nth-child(3)");
+      console.log(thirdLiEl);
 
-      // let number = 1;
+      const result = thirdLiEl.closest("div");
+      console.log(result);
 
-      // for (const liItem of liItems) {
-      //   liItem.textContent = number;
-      //   liItem.dataset.id = number;
-      //   number++;
-      // }
-
-      const thirdLi = document.querySelector("[data-id='3']");
-      console.log(thirdLi);
-
-      console.log(thirdLi.closest(".wrapper"));
     </script>
   </body>
 </html>

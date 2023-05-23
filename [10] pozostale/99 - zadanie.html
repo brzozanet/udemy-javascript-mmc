@@ -8,19 +8,18 @@
 </head>
 <body>
     <img>
-
     <script>
-        const imgTag = document.querySelector("img");
-        console.log(imgTag);
+        const imgEl = document.querySelector('img');
+        imgEl.src = "https://fotowarsztaty.com/wp-content/uploads/fotowarsztaty-morawy_wide-uai-1032x774.jpg";
+        imgEl.alt = "Zdjęcie z fotowarsztatów";
 
-        imgTag.setAttribute("src", "https://fotowarsztaty.com/wp-content/uploads/logo-fotowarsztaty-1.png");
-        imgTag.setAttribute("alt", "logo Fotowarsztaty");
+        const writeSomething = () => {
+            const paragraphEl = document.createElement('p');
+            paragraphEl.textContent = "Lorem ipsum dolor sit amet cooomm";
+            document.body.append(paragraphEl);
+        };
 
-        const text = () => {
-            console.log("Witaj na Fotowarsztatach!");
-        }
-
-        setTimeout(text, 2000);
+        setTimeout(writeSomething, 5000);
     </script>
 </body>
 </html>

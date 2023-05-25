@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>CLICK</button>
+    <img src="" alt="" />
+
+    <script>
+      const btnEl = document.querySelector("button");
+      const imgEl = document.querySelector("img");
+
+      const URL = "https://dog.ceo/api/breeds/image/random";
+
+        function fetchDogImg() {
+          fetch(URL)
+            .then((response) => response.json())
+            .then((data) => imgEl.setAttribute("src", data.message))
+            .catch((error) => console.log(error));
+        }
+
+        btnEl.addEventListener("click", fetchDogImg);
+
+    </script>
+  </body>
+</html>

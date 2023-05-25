@@ -10,21 +10,8 @@
     <button>CLICK</button>
     <img src="" alt="" />
 
-    <script>
-      const btnEl = document.querySelector("button");
-      const imgEl = document.querySelector("img");
+    <!-- https://dog.ceo/api/breeds/image/random -->
 
-      const URL = "https://dog.ceo/api/breeds/image/random";
-
-        function fetchDogImg() {
-          fetch(URL)
-            .then((response) => response.json())
-            .then((data) => imgEl.setAttribute("src", data.message))
-            .catch((error) => console.log(error));
-        }
-
-        btnEl.addEventListener("click", fetchDogImg);
-
-    </script>
+    <script></script>
   </body>
 </html>

@@ -35,7 +35,7 @@ const checkPassword = () => {
     }
     if (password.match(letters) && password.match(numbers)) {
       showInfo.textContent = "Hasło w porządku 🙂";
-      showInfo.style.color = "green";
+      showInfo.style.color = "gold";
     }
     if (
       password.match(letters) &&

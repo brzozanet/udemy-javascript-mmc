@@ -13,24 +13,29 @@ const checkPassword = () => {
   const password = passwordInput.value;
   console.log(password);
   if (password.length > minValue) {
-    // showInfo.textContent = "Hasło w porządku 🙂";
     if (password.match(letters)) {
       showInfo.textContent = "Hasło nie zawiera cyfr 😐";
+      showInfo.style.color = "red";
     }
     if (password.match(numbers)) {
       showInfo.textContent = "Hasło nie zawiera liter 😐";
+      showInfo.style.color = "red";
     }
     if (password.match(special)) {
       showInfo.textContent = "Hasło nie zawiera cyfr ani liter 😐";
+      showInfo.style.color = "red";
     }
     if (password.match(letters) && password.match(special)) {
       showInfo.textContent = "Hasło nie zawiera cyfr 😐";
+      showInfo.style.color = "red";
     }
     if (password.match(numbers) && password.match(special)) {
       showInfo.textContent = "Hasło nie zawiera liter 😐";
+      showInfo.style.color = "red";
     }
     if (password.match(letters) && password.match(numbers)) {
       showInfo.textContent = "Hasło w porządku 🙂";
+      showInfo.style.color = "green";
     }
     if (
       password.match(letters) &&
@@ -38,9 +43,11 @@ const checkPassword = () => {
       password.match(special)
     ) {
       showInfo.textContent = "Hasło jest idealne 😀";
+      showInfo.style.color = "lime";
     }
   } else {
     showInfo.textContent = "Hasło jest za krótkie 🙁";
+     showInfo.style.color = "red";    
   }
 
   if (password === "") {

@@ -13,3 +13,5 @@ let result;
 function reset() {
     numberEL.value = "";
 }
+
+resetBtnEl.addEventListener("click", reset);

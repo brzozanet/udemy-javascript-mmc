@@ -28,11 +28,19 @@ function changeUnit() {
 
 function convert() {
   if (spanOneEl.innerHTML === "°C") {
-    result = numberEl.value * 1.8 + 32;
-    resultEl.innerHTML = result.toFixed(1);
+    if (numberEl.value === "") {
+      resultEl.innerHTML = "Nie Wpisałeś/aś liczby";
+    } else {
+      result = numberEl.value * 1.8 + 32;
+      resultEl.innerHTML = result.toFixed(1);
+    }
   } else {
-    result = (numberEl.value - 32) / 1.8;
-    resultEl.innerHTML = result.toFixed(1);
+    if (numberEl.value === "") {
+      resultEl.innerHTML = "Nie Wpisałeś/aś liczby";
+    } else {
+      result = (numberEl.value - 32) / 1.8;
+      resultEl.innerHTML = result.toFixed(1);
+    }
   }
 }
 

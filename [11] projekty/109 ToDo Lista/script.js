@@ -8,6 +8,13 @@ let completeBtnElement;
 let editBtnElement;
 let deleteBtnElement;
 
+let popupElement;
+let popupInfoElement;
+let taskToEditElement;
+let popupInputElement;
+let popupAddBtnElement;
+let popupCloseElement;
+
 function main() {
   prepareDOMElemets();
   prepareDOMEvents();
@@ -18,16 +25,16 @@ function prepareDOMElemets() {
   errorInfoElement = document.querySelector(".error-info");
   addBtnElement = document.querySelector(".btn-add");
   ulListElement = document.querySelector(".todolist ul");
-  // completeBtnElement = document.querySelector(".complete");
-  // editBtnElement = document.querySelector(".edit");
-  // deleteBtnElement = document.querySelector(".delete");
+  popupElement = document.querySelector(".popup");
+  popupInputElement = document.querySelector(".popup-input");
+  popupAddBtnElement = document.querySelector(".accept");
+  popupCloseElement = document.querySelector(".cancel");
 }
 
 function prepareDOMEvents() {
   addBtnElement.addEventListener("click", addNewTask);
-  // completeBtnElement.addEventListener("click", completeTask);
-  // editBtnElement.addEventListener("click", editTask);
-  // deleteBtnElement.addEventListener("click", deleteTask);
+  ulListElement.addEventListener("click", checkClick);
+  popupCloseElement.addEventListener("click", closePopup);
 }
 
 function addNewTask() {
@@ -75,6 +82,23 @@ function createToolsArea() {
   newTaskElement.append(toolsElement);
 }
 
-function markAsCompleted() {}
+function checkClick(event) {
+  if (event.target.matches(".complete")) {
+    event.target.closest("li").classList.add("completed");
+    event.target.classList.add("completed");
+  } else if (event.target.matches(".edit")) {
+    popupElement.style.display = "block";
+  } else if (event.target.matches(".delete")) {
+    event.target.closest("li").remove();
+  }
+}
+
+function editTask() {
+
+};
+
+function closePopup() {
+  popupElement.style.display = "none";
+}
 
 document.addEventListener("DOMContentLoaded", main);

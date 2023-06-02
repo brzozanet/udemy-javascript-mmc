@@ -27,13 +27,16 @@ function prepareDOMElemets() {
   ulListElement = document.querySelector(".todolist ul");
   popupElement = document.querySelector(".popup");
   popupInputElement = document.querySelector(".popup-input");
+  popupInfoElement = document.querySelector(".popup-info");
   popupAddBtnElement = document.querySelector(".accept");
   popupCloseElement = document.querySelector(".cancel");
 }
 
 function prepareDOMEvents() {
   addBtnElement.addEventListener("click", addNewTask);
+  inputElement.addEventListener("keyup", addByEnter);
   ulListElement.addEventListener("click", checkClick);
+  popupAddBtnElement.addEventListener("click", saveTask);
   popupCloseElement.addEventListener("click", closePopup);
 }
 
@@ -87,18 +90,44 @@ function checkClick(event) {
     event.target.closest("li").classList.add("completed");
     event.target.classList.add("completed");
   } else if (event.target.matches(".edit")) {
-    popupElement.style.display = "block";
+    editTask(event);
   } else if (event.target.matches(".delete")) {
-    event.target.closest("li").remove();
+    deleteTask(event);
   }
 }
 
-function editTask() {
+function editTask(event) {
+  popupInfoElement.textContent = "";
+  popupElement.style.display = "flex";
+  taskToEditElement = event.target.closest("li");
+  popupInputElement.value = taskToEditElement.firstChild.textContent;
+}
 
-};
+function saveTask(event) {
+  if (popupInputElement.value !== "") {
+    taskToEditElement.firstChild.textContent = popupInputElement.value;
+    popupElement.style.display = "none";
+  } else {
+    popupInfoElement.textContent = "Nie wpisałeś/aś treści zadania.";
+  }
+}
+
+function deleteTask(event) {
+  event.target.closest("li").remove();
+  const allTasks = document.querySelectorAll("li");
+  if (allTasks.length === 0) {
+    errorInfoElement.textContent = "Brak zadań na liście";
+  }
+}
 
 function closePopup() {
   popupElement.style.display = "none";
+}
+
+function addByEnter(event) {
+  if (event.key === "Enter") {
+    addNewTask(event);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", main);

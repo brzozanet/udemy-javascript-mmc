@@ -54,7 +54,7 @@ button:hover {
 }
 
 .wrapper {
-  width: 800px;
+  width: 900px;
   padding: 20px 40px;
   background-color: rgba(0, 0, 0, 0.8);
   border: 2px solid white;
@@ -62,7 +62,7 @@ button:hover {
 }
 
 .top {
-  height: 260px;
+  height: 300px;
 }
 
 .bottom {

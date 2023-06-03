@@ -16,11 +16,10 @@
 
       const API_URL = "https://dog.ceo/api/breeds/image/random";
 
-      function getDogFromApi() {
-        fetch(API_URL)
-          .then((response) => response.json())
-          .then((data) => imgEl.setAttribute("src", data.message))
-          .catch((error) => console.log(error));
+      async function getDogFromApi() {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        imgEl.src = data.message;
       }
 
       btnEl.addEventListener("click", getDogFromApi);

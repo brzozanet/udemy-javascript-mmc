@@ -1,1 +1,1 @@
-# udemy-kurs-javascript-mmc
+# udemy-javascript-mmc
